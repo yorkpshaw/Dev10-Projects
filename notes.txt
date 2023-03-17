@@ -1,0 +1,46 @@
+<blockquote> indicates enclosed text is an extended quotation
+<blockquote cite="https://www.goodreads.com/quotes/tag/programming">
+    <p>Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</p>
+    <footer>—Martin Fowler</footer>
+</blockquote>
+
+<pre> element allows writing text that acknowledges whitespace
+
+/*
+*/
+
+\ <- Escape Character
+
+Description Lists (dictionary, glossary) encloses a list of terms and details
+<dl>
+    <dt>HTML</dt>
+    <dd>Hypertext Markup Language</dd>
+
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheet</dd>
+</dl>
+
+Figure tag groups self-contained content
+<figure>
+    <pre>
+        Roses are red.
+        Violets are blue.
+        I can't rhyme.
+        Banana.
+    </pre>
+    <figcaption>A failed attempt at a poem</figcaption>
+</figure>
+
+Fieldset element groups things like checkboxes and radio buttons together. The legend element provides the caption.
+<fieldset>
+    <legend>What is your favorite color?</legend>
+
+    <input type="radio" id="blue" name="color">
+    <label for="blue">Blue</label><br/>
+
+    <input type="radio" id="green" name="color">
+    <label for="green">Green</label><br/>
+
+    <input type="radio" id="red" name="color">
+    <label for="red">Red</label>
+</fieldset>
