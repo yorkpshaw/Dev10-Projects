@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Content Type-->
+    <meta http-equiv="content-type" content="text/html">
+    <meta http-equiv="content-type" content="text/html">
+
+    <!--Styling-->
+    <style>
+        .good-things {
+            color: green;
+        }
+        .bad-things {
+            color: red;
+        }
+    </style>
+    <!--Tab/Browser Icons-->
+    <link rel="icon" href="images/filename.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/touchicon-152.png" sizes="152x152" type="image/png">
+    <title>Test Page</title>
+</head>
+<body>
+    <!--Redirection-->
+    <p>For searching, visit <a href="http://www.google.com" target="_blank">Google's website</a> (link opens in a new window/tab).</p>
+
+    <!--Clickable logo-->
+    <a href="http://www.google.com"><img src="images/google-logo.png" alt="Google's Logo"></a>
+
+    <!--Strong tag-->
+    <p>Thank you for purchasing the acme-co clothing iron! <strong>Warning! Do not iron clothes on body!</strong></p>
+
+    <!--Address Element Block-->
+    <address>
+        <p> 100 Main St.<br>
+            Suite 204<br>
+            Atlanta, GA 30324
+        </p>
+    </address>
+
+    <!--Display computer code-->
+    <p> The <code>document.getElementById()</code> method will select an HTML element that is assigned a specific id.
+    </p>
+
+    <!--Emphasis-->
+    <p>What did you expect me to do?! I had <em>no choice</em>!</p>
+
+    <!--Italics-->
+    <p>The <i>Nimitz</i> was the lead supercarrier of her class.</p>
+
+    <!--Embed another HTML page onto the current page-->
+    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+    src="https://www.openstreetmap.org/export/embed.html?bbox=-103.46102803945543%2C43.87750239039023%2C-103.45802932977678%2C43.87995775630232&amp;layer=mapnik"
+    style="border: 1px solid black"></iframe>
+
+    <!--In case user has JS disabled-->
+    <noscript>
+        <p>We're sorry, but you must enable JavaScript to use our application!</p>
+    </noscript>
+
+    <!--Big vs. Small-->
+    <p>That is a <big>really big</big>dog. <small>It intimidates me.</small></p>
+
+    <!--Span-->
+    <p>The grades available for this course are <span class="good-things">A, B, </span>C, <span class="bad-things">D, and F</span>
+    </p>
+
+    <!--Superscript and Subscript-->
+    <p>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> is a formula for glucose.</p>
+    <p>2<sup>3</sup> is 8</p>
+
+    <!--Image-->
+    <img src="images/red-roses.png" alt="A bouquet of red roses in a vase." style="width:300px; height:300px">
+
+    <!--Clickable Map-->
+    <img src="north-america.png" width="300" height="300" alt="Clickable map of North America" usemap="#na-map">
+    <map name="na-map">
+      <area shape="rect" coords="0,0,300,100" href="canada.html" alt="Sun">
+      <area shape="rect" coords="0,100,300,200" href="usa.html" alt="Mercury">
+      <area shape="rect" coords="0,200,300,300" href="mexico.html" alt="Venus">
+    </map>
+
+    <!--Embed a video-->
+    <video src="videos/hello.mp4" type="video/mp4" controls>
+        <p>This element only shows up if the browser does not support HTML5 video. Use it to provide a download link or alternate instructions.</p>
+    </video>
+
+    <!--Support Multiple Video Formats-->
+    <video controls>
+        <source src="videos/hello.mp4" type="video/mp4">
+        <source src="videos/hello.webm" type="video/webm">
+        <p>This element only shows up if the browser does not support HTML5 video. Use it to provide a download link or alternate instructions.</p>
+    </video>
+
+    <!--Extra Video Attributes-->
+    <video controls width="800" height="600"
+       autoplay loop muted
+       poster="images/hello-the-movie.png">
+    <source src="videos/hello.mp4" type="video/mp4">
+    <source src="videos/hello.webm" type="video/webm">
+    <p>This element only shows up if the browser does not support HTML5 video. Use it to provide a download link or alternate instructions.</p>
+    </video>
+
+    <!--Track Element adds text in case of audio issues or impairment-->
+    <video controls width="800" height="600"
+       autoplay loop muted
+       poster="images/hello-the-movie.png">
+    <source src="videos/hello.mp4" type="video/mp4">
+    <source src="videos/hello.webm" type="video/webm">
+    <track kind="subtitles" src="videos/hello_en.vtt"
+    ="en">
+    <p>This element only shows up if the browser does not support HTML5 video. Use it to provide a download link or alternate instructions.</p>
+    </video>
+
+    <!--Audio Element-->
+    <audio controls>
+        <source src="audio/hello.mp3" type="audio/mp3">
+        <source src="audio/hello.wav" type="audio/wav">
+        <p>This element only shows up if the browser does not support HTML5 video. Use it to provide a download link or alternate instructions.</p>
+    </audio>
+
+</body>
+</html>

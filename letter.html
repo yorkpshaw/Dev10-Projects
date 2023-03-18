@@ -19,13 +19,22 @@
     <div class="container">
         <address>
             York Shaw | 6625 Federal Hall St. | Plano, TX 75023<br>
-            3/17/23<br>
+            <div id="date"></div>
             Yoda | Master | Jedi | Dagobah | <br>
         </address>
+    <main>
         <br>Dear Jedi Master Yoda:<br>
         <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque fuga facilis iste in, aliquam id vel commodi similique soluta ratione, aliquid voluptatem alias quidem tempora reprehenderit optio aperiam recusandae porro.<br>
         <br>Sincerely,<br>
         <br>York Shaw<br>
+    </main>
     </div>
+    <script>
+        const n = new Date();
+        const y = n.getFullYear();
+        const m = n.getMonth() + 1;
+        const d = n.getDate();
+        document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+    </script>
 </body>
 </html>
