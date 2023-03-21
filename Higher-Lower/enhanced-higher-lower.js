@@ -29,7 +29,10 @@ function guessNumber() {
 
     if (isNaN(guess) || guess > input) {
         message.innerHTML = `"Sorry! That is either not a number or in the range of 1 to ${input}"`
-    } else if (guess === correctGuess) {
+    } else if (results.includes(guess)) {
+        message.innerHTML = `"Sorry, you already guessed ${guess}. Try again!"`
+    }
+    else if (guess === correctGuess) {
         results.push(guess)
         message.innerHTML = `"You got it! It took you ${results.length} tries and here are your tries: ${results}"`
     } else if (guess > correctGuess) {
