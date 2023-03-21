@@ -7,7 +7,9 @@ function guessNumber() {
     let message = document.getElementById("message");
     guess = Number(document.getElementById("guess").value)
 
-    if (guess === correctGuess) {
+    if (isNaN(guess)) {
+        message.innerHTML = "Nice try! That is NOT a number!"
+    } else if (guess === correctGuess) {
         message.innerHTML = "You got it!"
     } else if (guess > correctGuess) {
         message.innerHTML = "No, try a lower number."
@@ -34,20 +36,6 @@ window.onload = () => {
     console.log(correctGuess)
 
 }
-    // let message = document.getElementById("message");
-    // let guess = Number(document.getElementById("guess").value)
-
-    // if (guess === correctGuess) {
-    //     message.innerHTML = "You got it!"
-    // } else if (guess > correctGuess) {
-    //     message.innerHTML = "No, try a lower number."
-    // } else {
-    //     message.innerHTML = "No, try a higher number."
-    // }
-
-
-
-
 
 
 /*
