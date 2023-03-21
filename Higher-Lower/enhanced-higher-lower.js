@@ -1,3 +1,21 @@
+let input;
+let guess;
+let correctGuess;
+
+function guessNumber() {
+
+    let message = document.getElementById("message");
+    guess = Number(document.getElementById("guess").value)
+
+    if (guess === correctGuess) {
+        message.innerHTML = "You got it!"
+    } else if (guess > correctGuess) {
+        message.innerHTML = "No, try a lower number."
+    } else {
+        message.innerHTML = "No, try a higher number."
+}
+}
+
 window.onload = () => {
     do {
         input = Math.round(Number(prompt("Enter a maximum number:")));
@@ -12,9 +30,10 @@ window.onload = () => {
     const num = document.querySelector('#number');
     num.textContent = `You picked the number ${input}! Guess a number between 1 and ${input}.`;
 
+    correctGuess = Math.floor(Math.random() * input) + 1
+    console.log(correctGuess)
 
-
-};
+}
     // let message = document.getElementById("message");
     // let guess = Number(document.getElementById("guess").value)
 
