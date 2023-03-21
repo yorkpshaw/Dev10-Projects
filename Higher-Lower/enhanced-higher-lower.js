@@ -27,8 +27,8 @@ function guessNumber() {
     guess = Number(document.getElementById("guess").value)
 
 
-    if (isNaN(guess)) {
-        message.innerHTML = "Nice try! That is NOT a number!"
+    if (isNaN(guess) || guess > input) {
+        message.innerHTML = `"Sorry! That is either not a number or in the range of 1 to ${input}"`
     } else if (guess === correctGuess) {
         results.push(guess)
         message.innerHTML = `"You got it! It took you ${results.length} tries and here are your tries: ${results}"`
