@@ -1,21 +1,33 @@
 window.onload = () => {
+    do {
+        input = Math.round(Number(prompt("Enter a maximum number:")));
 
-do {
-  input = Math.round(Number(prompt("Enter a number greater than 0:")));
+        if (isNaN(input)) {
+            alert("That is not a number! Please enter a number!");
+        } else if (input <= 1) {
+            alert("Invalid number. Please enter a positive integer greater than 1...but I guess a decimal works too.");
+        }
+    } while (isNaN(input) || input <= 1);
 
-  if (isNaN(input)) {
-    alert("That is not a number. Please enter a number greater than 1.");
-    console.log(input)
-  } else if (input <= 0) {
-    alert("Please enter a number greater than one.");
-    console.log(input)
-
-  }
-} while (isNaN(input) || input <= 0);
-console.log(input)
+    const num = document.querySelector('#number');
+    num.textContent = `You picked the number ${input}! Guess a number between 1 and ${input}.`;
 
 
-  };
+
+};
+    // let message = document.getElementById("message");
+    // let guess = Number(document.getElementById("guess").value)
+
+    // if (guess === correctGuess) {
+    //     message.innerHTML = "You got it!"
+    // } else if (guess > correctGuess) {
+    //     message.innerHTML = "No, try a lower number."
+    // } else {
+    //     message.innerHTML = "No, try a higher number."
+    // }
+
+
+
 
 
 
