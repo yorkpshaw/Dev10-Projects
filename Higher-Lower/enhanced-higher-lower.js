@@ -1,27 +1,11 @@
 let input;
 let guess;
 let correctGuess;
-
-function guessNumber() {
-
-    let message = document.getElementById("message");
-    guess = Number(document.getElementById("guess").value)
-
-    if (isNaN(guess)) {
-        message.innerHTML = "Nice try! That is NOT a number!"
-    } else if (guess === correctGuess) {
-        message.innerHTML = "You got it!"
-    } else if (guess > correctGuess) {
-        message.innerHTML = "No, try a lower number."
-    } else {
-        message.innerHTML = "No, try a higher number."
-}
-}
+let results = [];
 
 window.onload = () => {
     do {
         input = Math.round(Number(prompt("Enter a maximum number:")));
-
         if (isNaN(input)) {
             alert("That is not a number! Please enter a number!");
         } else if (input <= 1) {
@@ -35,6 +19,26 @@ window.onload = () => {
     correctGuess = Math.floor(Math.random() * input) + 1
     console.log(correctGuess)
 
+}
+
+function guessNumber() {
+
+    let message = document.getElementById("message");
+    guess = Number(document.getElementById("guess").value)
+
+
+    if (isNaN(guess)) {
+        message.innerHTML = "Nice try! That is NOT a number!"
+    } else if (guess === correctGuess) {
+        results.push(guess)
+        message.innerHTML = `"You got it! It took you ${results.length} tries and here are your tries: ${results}"`
+    } else if (guess > correctGuess) {
+        results.push(guess)
+        message.innerHTML = "No, try a lower number."
+    } else {
+        results.push(guess)
+        message.innerHTML = "No, try a higher number."
+}
 }
 
 
@@ -65,8 +69,3 @@ PREVENT DUPLICATE GUESSES
 1. Check the results array to make sure the current guess does not already exist.
 2. If the guess does exist, display a message that a number has already been guessed.
 */
-
-
-// If the prompt's input is equal or less than 0, display "That number is not in range, try again"
-// If the prompt's input is NaN, display "That is not a number!" - Any type that is not a number
-// If
