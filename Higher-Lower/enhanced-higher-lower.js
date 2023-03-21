@@ -1,21 +1,23 @@
-let correctGuess = Math.floor(Math.random() * 20) + 1
-console.log(correctGuess)
+window.onload = () => {
 
-function guessNumber() {
+do {
+  input = Math.round(Number(prompt("Enter a number greater than 0:")));
 
-    let message = document.getElementById("message");
-    let guess = Number(document.getElementById("guess").value)
+  if (isNaN(input)) {
+    alert("That is not a number. Please enter a number greater than 1.");
+    console.log(input)
+  } else if (input <= 0) {
+    alert("Please enter a number greater than one.");
+    console.log(input)
 
-    if (guess === correctGuess) {
-        message.innerHTML = "You got it!"
-    } else if (guess > correctGuess) {
-        message.innerHTML = "No, try a lower number."
-    } else {
-        message.innerHTML = "No, try a higher number."
-    }
+  }
+} while (isNaN(input) || input <= 0);
+console.log(input)
 
 
-}
+  };
+
+
 
 /*
 PROMPT FOR MAX NUMBER
@@ -27,7 +29,7 @@ PROMPT FOR MAX NUMBER
 
 /*
 VALIDATE THE GUESS
-1. If the guess is NaN, display "That  is not a number!"
+1. If the guess is NaN, display "That is not a number!"
 2. If the guess is out of range (below 1 to over N), display "That number is not in range, try again."
 */
 
@@ -44,3 +46,8 @@ PREVENT DUPLICATE GUESSES
 1. Check the results array to make sure the current guess does not already exist.
 2. If the guess does exist, display a message that a number has already been guessed.
 */
+
+
+// If the prompt's input is equal or less than 0, display "That number is not in range, try again"
+// If the prompt's input is NaN, display "That is not a number!" - Any type that is not a number
+// If
