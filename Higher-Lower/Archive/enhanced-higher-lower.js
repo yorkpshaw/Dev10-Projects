@@ -4,7 +4,6 @@ let correctGuess;
 let results = [];
 
 window.onload = () => {
-
     do {
         input = Math.round(Number(prompt("Enter a maximum number:")));
         if (isNaN(input)) {
@@ -18,8 +17,9 @@ window.onload = () => {
     num.textContent = `You picked the number ${input}! Guess a number between 1 and ${input}.`;
 
     correctGuess = Math.floor(Math.random() * input) + 1
+    console.log(correctGuess)
 
-};
+}
 
 function guessNumber() {
 
@@ -42,6 +42,5 @@ function guessNumber() {
     } else {
         results.push(guess)
         message.innerHTML = "No, try a higher number."
-
-    }
-};
+}
+}
